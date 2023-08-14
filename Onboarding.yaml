@@ -3,3 +3,5 @@ info:
   title: OnboardingAPI
   description: STD22070
   version: 1.3.0
+servers:
+  - url: http://std22070.com
