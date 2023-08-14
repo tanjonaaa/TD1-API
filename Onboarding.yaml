@@ -30,5 +30,16 @@ paths:
       responses:
         '200':
           description: Successfully added your student
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  birthdate:
+                    type: string
         '500':
           description: Internal server error
