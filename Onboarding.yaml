@@ -27,6 +27,18 @@ paths:
         '500':
           description: Internal server error
     post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                birthdate:
+                  type: string
       responses:
         '200':
           description: Successfully added your student
