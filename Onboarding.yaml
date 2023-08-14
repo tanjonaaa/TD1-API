@@ -26,3 +26,9 @@ paths:
                       type: string
         '500':
           description: Internal server error
+    post:
+      responses:
+        '200':
+          description: Successfully added your student
+        '500':
+          description: Internal server error
