@@ -8,6 +8,7 @@ servers:
 paths:
   /students:
     get:
+      summary: Get a list of all students
       tags:
         - students
       responses:
@@ -22,6 +23,7 @@ paths:
         '500':
           description: Internal server error
     post:
+      summary: Create a new student
       tags:
         - students
       requestBody:
