@@ -88,3 +88,21 @@ components:
           type: string
         birthdate:
           type: string
+    Teacher:
+      type: object
+      properties:
+        id:
+          type: integer
+        firstName:
+          type: string
+        lastName:
+          type: string
+    Course:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        code:
+          type: string
