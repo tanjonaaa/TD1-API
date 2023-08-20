@@ -8,6 +8,8 @@ servers:
 paths:
   /students:
     get:
+      tags:
+        - students
       responses:
         '200':
           description: Successfully get all students
@@ -27,6 +29,8 @@ paths:
         '500':
           description: Internal server error
     post:
+      tags:
+        - students
       requestBody:
         required: true
         content:
