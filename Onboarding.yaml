@@ -77,6 +77,9 @@ paths:
           description: Successfully deleted student
         '500':
           description: Internal server error
+  /teachers:
+    get:
+      summary: Get the list of teachers with their
 components:
   schemas:
     Student:
@@ -97,6 +100,10 @@ components:
           type: string
         lastName:
           type: string
+        courses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Course'
     Course:
       type: object
       properties:
