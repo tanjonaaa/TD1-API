@@ -18,14 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    name:
-                      type: string
-                    birthdate:
-                      type: string
+                  $ref: '#/components/schemas/Student'
         '500':
           description: Internal server error
     post:
@@ -36,26 +29,24 @@ paths:
         content:
           application/json:
             schema:
-              properties:
-                id:
-                  type: integer
-                name:
-                  type: string
-                birthdate:
-                  type: string
+              $ref: '#/components/schemas/Student'
       responses:
         '200':
           description: Successfully added your student
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                  name:
-                    type: string
-                  birthdate:
-                    type: string
+                $ref: '#/components/schemas/Student'
         '500':
           description: Internal server error
+components:
+  schemas:
+    Student:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        birthdate:
+          type: string
