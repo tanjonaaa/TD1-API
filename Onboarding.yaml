@@ -79,7 +79,39 @@ paths:
           description: Internal server error
   /teachers:
     get:
-      summary: Get the list of teachers with their
+      summary: Get the list of teachers with their courses
+      tags:
+        - teachers
+      responses:
+        '200':
+          description: Successfully get all teachers with their courses
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Teacher'
+        '500':
+          description: Internal server error
+    post:
+      summary: Add a new teacher
+      tags:
+        - teachers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Teacher'
+      responses:
+        '200':
+          description: Successfully added a teacher
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Teacher'
+        '500':
+          description: Internal server error
 components:
   schemas:
     Student:
