@@ -49,6 +49,7 @@ paths:
           type: integer
         required: true
         description: ID of the student
+        example: 1
     put:
       summary: Modify a student
       tags:
@@ -119,19 +120,25 @@ components:
       properties:
         id:
           type: integer
+          example: 1
         name:
           type: string
+          example: Tanjona Andriantsitohaina
         birthdate:
           type: string
+          example: 2005-10-27
     Teacher:
       type: object
       properties:
         id:
           type: integer
+          example: 1
         firstName:
           type: string
+          example: Tokimahery
         lastName:
           type: string
+          example: Ramarozaka
         courses:
           type: array
           items:
@@ -145,3 +152,13 @@ components:
           type: string
         code:
           type: string
+      example:
+        - id: 1
+          name: Algorithmique
+          code: PROG1
+        - id: 2
+          name: Intéractions Homme-Machine
+          code: IHM1
+        - id: 3
+          name: Bases de données relationnelles
+          code: DONNEES1
