@@ -41,6 +41,42 @@ paths:
                 $ref: '#/components/schemas/Student'
         '500':
           description: Internal server error
+  /students/{studentId}:
+    parameters:
+      - in: path
+        name: studentId
+        schema:
+          type: integer
+        required: true
+        description: ID of the student
+    put:
+      summary: Modify a student
+      tags:
+        - students
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Student'
+      responses:
+        '200':
+          description: Successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Student'
+        '500':
+          description: Internal server error
+    delete:
+      summary: Delete a student by its ID
+      tags:
+        - students
+      responses:
+        '200':
+          description: Successfully deleted student
+        '500':
+          description: Internal server error
 components:
   schemas:
     Student:
